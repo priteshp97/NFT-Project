@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+img {
+  display: block;
+  width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
+  background-color: #1a1723;
+  position: sticky;
+  top: 0;
+}
+
+.nav-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0.75rem 2rem;
+}
+
+.nav-left {
+  width: 11rem;
+}
+
+.nav-center a {
+  margin: 0 2rem;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-right {
+  display: flex;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.btn-connect {
+  padding: 0.4rem 1.5rem;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  color: rgb(238, 57, 34);
+  border: 1.75px solid rgb(238, 57, 34);
+  margin-left: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.header {
+  min-height: 100vh;
+  background: url("./assets/Kaiju-header.gif") center/cover no-repeat;
+  display: grid;
+  place-items: center;
+}
+
+.header-info {
+  text-align: center;
+  max-width: 860px;
+}
+
+.header-info-text {
+  color: rgb(227, 227, 227);
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.arrow {
+  height: 3rem;
+  width: 2.5rem;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  animation: arrow 2.5s infinite;
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+  10% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
   }
 }

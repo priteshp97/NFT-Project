@@ -21,7 +21,6 @@ const HeaderSection = () => {
           <img src={arrow} alt="" className="arrow" />
         </div>
       </div>
-      ;
     </>
   );
 };

@@ -4,8 +4,62 @@ import twitterLogo from "../assets/twitter-logo.JPG";
 import openseaLogo from "../assets/opensea-logo.JPG";
 import ReactDOM from "react-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useEffect, useState } from "react";
+import {
+  connectWallet,
+  getCurrentWalletConnected, //import here
+} from "../utils/interact";
 
 const NavSection = () => {
+  const [walletAddress, setWallet] = useState("");
+  const [status, setStatus] = useState("");
+  const [name, setName] = useState("");
+  const [description, setDescription] = useState("");
+  const [url, setURL] = useState("");
+
+  useEffect(async () => {
+    const { address, status } = await getCurrentWalletConnected();
+    setWallet(address);
+    setStatus(status);
+
+    addWalletListener();
+  }, []);
+
+  const connectWalletPressed = async () => {
+    const walletResponse = await connectWallet();
+    setStatus(walletResponse.status);
+    setWallet(walletResponse.address);
+  };
+
+  function addWalletListener() {
+    if (window.ethereum) {
+      window.ethereum.on("accountsChanged", (accounts) => {
+        if (accounts.length > 0) {
+          setWallet(accounts[0]);
+          setStatus("👆🏽 Write a message in the text-field above.");
+        } else {
+          setWallet("");
+          setStatus("🦊 Connect to Metamask using the top right button.");
+        }
+      });
+    } else {
+      setStatus(
+        <p>
+          {" "}
+          🦊{" "}
+          <a target="_blank" href={`https://metamask.io/download.html`}>
+            You must install Metamask, a virtual Ethereum wallet, in your
+            browser.
+          </a>
+        </p>
+      );
+    }
+  }
+
+  const onMintPressed = async () => {
+    //TODO: implement
+  };
+
   return (
     <nav>
       <div className="nav-container">
@@ -22,7 +76,19 @@ const NavSection = () => {
           <img src={discord} alt="" />
           <img src={twitterLogo} alt="" />
           <img src={openseaLogo} alt="" />
-          <button className="btn-connect">CONNECT</button>
+          <button
+            id="walletButton"
+            className="btn-connect"
+            onClick={connectWalletPressed}
+          >
+            {walletAddress.length > 0 ? (
+              String(walletAddress).substring(0, 4) +
+              "..." +
+              String(walletAddress).substring(38)
+            ) : (
+              <span>Connect</span>
+            )}
+          </button>
         </div>
       </div>
     </nav>

@@ -60,7 +60,7 @@ nav {
 
 .header {
   min-height: 100vh;
-  background: linear-gradient(180deg, transparent 60%, rgba(0, 0, 0, 1)),
+  background: linear-gradient(180deg, transparent 60%, #000),
     url("./assets/Kaiju-header.gif") center/cover no-repeat;
   display: grid;
   place-items: center;
@@ -128,5 +128,32 @@ nav {
   font-family: "KaijuKingz";
   position: absolute;
   top: 44%;
-  right: 9%;
+  right: 8%;
+}
+
+.about {
+  background: linear-gradient(180deg, transparent 60%, #000),
+    linear-gradient(0deg, transparent 60%, #000),
+    url("./assets/about.gif") center/cover no-repeat;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.about-container {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3rem;
+}
+
+.about-left p {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 2rem;
+  margin-top: 1rem;
+}
+
+.about-right img {
+  margin-top: 2rem;
 }

@@ -9,6 +9,15 @@
   src: URL("./assets/download.ttf") format("truetype");
 }
 
+h3 {
+  font-family: "KaijuKingz";
+  letter-spacing: 0.1rem;
+  text-align: center;
+  color: rgb(237, 56, 35);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
 a {
   text-decoration: none;
 }
@@ -165,4 +174,77 @@ nav {
   margin-top: 2rem;
   max-width: 500px;
   max-height: 500px;
+}
+
+/* Utility */
+
+.utility {
+  background-color: rgb(0, 0, 0);
+}
+
+.utility-container {
+  width: 90vw;
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+.utility-headings {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.utility-headings img {
+  width: 45%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+.utility-headings p {
+  color: white;
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;
+  font-family: "KaijuKingz";
+}
+
+.utility-headings span {
+  color: rgb(237, 56, 35);
+}
+
+.utility-info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 5rem;
+}
+
+.utility-info-left p {
+  color: white;
+  font-size: 0.8rem;
+  max-width: 960px;
+}
+
+.utility-info-right p {
+  color: white;
+  font-size: 0.8rem;
+  max-width: 960px;
+}
+
+.utility-breeding img {
+  width: 55%;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+
+.utility-community h3 {
+  margin-top: 2rem;
+}
+
+.utility-community ul {
+  color: white;
+  text-align: center;
+  list-style-type: none;
+  max-width: 1200px;
+  margin: 0 auto;
+  line-height: 2rem;
+  font-size: 0.8rem;
 }

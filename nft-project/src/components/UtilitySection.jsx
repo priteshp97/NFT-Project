@@ -65,6 +65,26 @@ const UtilitySection = () => {
           </ul>
         </div>
       </div>
+      <div className="roadmap-launch">
+        <h2 className="h-center">POST LAUNCH SCHEDULE</h2>
+        <div className="roadmap-container">
+          <div className="roadmap-1">
+            <h2>PHASE 1</h2>
+            <h2>Legendary Auction [Finished]</h2>
+            <p>
+              Feast your eyes on some of the rarest KaijuKingz in the
+              collection: the Legendary Kaijuz. Only 10 of these mythical beasts
+              exist, and they are all unique 1/1 special edition Kaijuz with
+              animations exclusive to them. One Legendary Kaiju, the Mecha
+              Kaiju, was exclusively auctioned off, only allowing holders of
+              N0XSCAPE Founders Cards to participate in the auction. Another one
+              of these special Legends was tucked away in the initial mint of
+              KaijuKingz for one lucky degen to find. After all KaijuKingz were
+              minted, the final 8 were auctioned off.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

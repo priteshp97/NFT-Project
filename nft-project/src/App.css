@@ -9,6 +9,14 @@
   src: URL("./assets/download.ttf") format("truetype");
 }
 
+h2 {
+  font-family: "KaijuKingz";
+  letter-spacing: 0.1rem;
+  color: rgb(237, 56, 35);
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
 h3 {
   font-family: "KaijuKingz";
   letter-spacing: 0.1rem;
@@ -16,6 +24,10 @@ h3 {
   color: rgb(237, 56, 35);
   margin-bottom: 1rem;
   font-size: 1.5rem;
+}
+
+.h-center {
+  text-align: center;
 }
 
 a {
@@ -247,4 +259,23 @@ nav {
   margin: 0 auto;
   line-height: 2rem;
   font-size: 0.8rem;
+}
+
+/* ultility - roadmap */
+
+.roadmap-launch {
+  margin-top: 1rem;
+}
+
+.roadmap-container {
+  width: 60%;
+  max-width: 1360px;
+  margin: 0 auto;
+  border-left: 3px solid #ed3823;
+  padding-left: 3rem;
+}
+
+.roadmap-1 p {
+  color: white;
+  text-align: left;
 }

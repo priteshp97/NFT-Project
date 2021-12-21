@@ -15,7 +15,7 @@ const JoinSection = () => {
             enrich the Web3 and creative landscape. See how you can help, or
             even participate as a scholarship applicant.
           </p>
-          <button>Join Our Discord</button>
+          <button className="btn-connect">JOIN OUR DISCORD</button>
         </div>
       </div>
     </section>

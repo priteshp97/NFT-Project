@@ -2,8 +2,10 @@ import logo from "../assets/kk-logo.png";
 import discord from "../assets/discord-logo.png";
 import twitterLogo from "../assets/twitter-logo.JPG";
 import openseaLogo from "../assets/opensea-logo.JPG";
+import nav from "../assets/mobile-icon.jpg";
 import ReactDOM from "react-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAlignJustify } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 import {
   connectWallet,
@@ -16,6 +18,7 @@ const NavSection = () => {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [url, setURL] = useState("");
+  const [isActive, setActive] = useState(false);
 
   useEffect(async () => {
     const { address, status } = await getCurrentWalletConnected();
@@ -29,6 +32,10 @@ const NavSection = () => {
     const walletResponse = await connectWallet();
     setStatus(walletResponse.status);
     setWallet(walletResponse.address);
+  };
+
+  const toggle = () => {
+    setActive(!isActive);
   };
 
   function addWalletListener() {
@@ -89,6 +96,28 @@ const NavSection = () => {
               <span>Connect</span>
             )}
           </button>
+        </div>
+        <div className="nav-right-mobile">
+          <FontAwesomeIcon
+            icon={faAlignJustify}
+            className="nav-mobile"
+            onClick={toggle}
+          />
+
+          <ul className={isActive ? "links show-links" : "links"}>
+            <li>
+              <a href="#">MINT</a>
+            </li>
+            <li>
+              <a href="#">ABOUT</a>
+            </li>
+            <li>
+              <a href="#">TEAM</a>
+            </li>
+            <li>
+              <a href="#">RWASTE</a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>

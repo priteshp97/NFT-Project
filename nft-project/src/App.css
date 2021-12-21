@@ -434,6 +434,10 @@ nav {
     width: 90%;
     padding-left: 2rem;
   }
+  .roadmap-h2 {
+    padding: 0 1rem;
+    margin-bottom: 3rem;
+  }
 }
 
 /* team section */

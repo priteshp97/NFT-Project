@@ -77,7 +77,7 @@ const UtilitySection = () => {
         </div>
       </div>
       <div className="roadmap-launch">
-        <h2 className="h-center">POST LAUNCH SCHEDULE</h2>
+        <h2 className="h-center roadmap-h2">POST LAUNCH SCHEDULE</h2>
         <div className="roadmap-container">
           <div className="roadmap-1">
             <h2>PHASE 1</h2>

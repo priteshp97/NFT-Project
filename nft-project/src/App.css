@@ -53,6 +53,7 @@ nav {
   background-color: #1a1723;
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 
 .nav-container {
@@ -137,6 +138,7 @@ nav {
   .nav-container {
     margin: 0;
     padding: 1rem;
+    overflow: hidden;
   }
 }
 
@@ -204,6 +206,7 @@ nav {
   width: 100%;
   height: 100%;
   position: relative;
+  z-index: 0;
 }
 
 .mint-text {
@@ -213,6 +216,7 @@ nav {
   position: absolute;
   top: 44%;
   right: 8%;
+  z-index: 0;
 }
 
 .about {

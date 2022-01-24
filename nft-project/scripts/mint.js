@@ -20,8 +20,8 @@ async function main() {
   // await receipt.wait();
   // console.log("base done");
 
-  receipt = await contract.mint(2, {
-    value: ethers.utils.parseEther("0.02"),
+  receipt = await contract.mint(1, {
+    value: ethers.utils.parseEther("0.01"),
   });
   await receipt.wait();
   console.log("Gas:", receipt.gasLimit);
